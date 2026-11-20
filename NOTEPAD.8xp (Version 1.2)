@@ -1,0 +1,260 @@
+1->L
+0->I
+2->A
+2->B
+ClrHome
+ClrDraw
+GridOff
+AxesOff
+~5.875->Xmin:5.875->Xmax:1->Xscl:~3.875->Ymin:3.875->Ymax:1->Yscl:1->Xres
+Disp "S[|e]l[|e][|c][t] Fil[|e]:":Input F
+If F=0:Then
+	"Pic0"->Str1
+	RecallPic Pic0
+End
+If F=1:Then
+	RecallPic Pic1
+	"Pic1"->Str1
+End
+If F=2:Then
+	RecallPic Pic2
+	"Pic2"->Str1
+End
+If F=3:Then
+	RecallPic Pic3
+	"Pic3"->Str1
+End
+If F=4:Then
+	RecallPic Pic4
+	"Pic4"->Str1
+End
+If F=5:Then
+	RecallPic Pic5
+	"Pic5"->Str1
+End
+If F=6:Then
+	RecallPic Pic6
+	"Pic6"->Str1
+End
+If F=7:Then
+	RecallPic Pic7
+	"Pic7"->Str1
+End
+If F=8:Then
+	RecallPic Pic8
+	"Pic8"->Str1
+End
+If F=9:Then
+	RecallPic Pic9
+	"Pic9"->Str1
+End
+ClrHome
+Pt-Off(0,0)
+Pxl-On(A-2,B-1):Pxl-On(A-2,B+0):Pxl-On(A-2,B+1):Pxl-On(A+2,B-1):Pxl-On(A+2,B+0):Pxl-On(A+2,B+1
+While I!=22
+	0->C
+	getKey->I
+	If I!=0 and I!=22 and I!=23 and I!=31 and I!=24 and I!=25 and I!=26 and I!=34:Then
+	Pxl-Off(A-1,B-1:Pxl-Off(A-1,B+0:Pxl-Off(A-1,B+1:Pxl-Off(A+0,B-1:Pxl-Off(A+0,B+0:Pxl-Off(A+0,B+1:Pxl-Off(A+1,B-1:Pxl-Off(A+1,B+0:Pxl-Off(A+1,B+1:End
+	If I=31 and L=1 and C=0:Then
+		0->L
+		1->C
+	End
+	If I=31 and L=0 and C=0:Then
+		1->L
+		1->C
+	End
+	If L=1:Then
+		If I=32:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):End
+		If I=33:Then
+		Pxl-On(A-1,B+0):End
+		If I=41:Then
+		Pxl-On(A-1,B+0):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=42:Then
+			Pxl-On(A-1,B-1):Pxl-On(A,B-1)
+			Pxl-On(A,B
+			Pxl-On(A,B+1)
+			Pxl-On(A+1,B-1):Pxl-On(A+1,B)
+		Pxl-On(A+1,B+1):End
+		If I=43:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=51:Then
+		Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=52:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=53:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):End
+		If I=54:Then
+		Pxl-On(A-1,B-1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=55:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=61:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=62:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):End
+		If I=63:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=64:Then
+		Pxl-On(A-1,B-1):Pxl-On(A+0,B-1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=65:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=71:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A+0,B-1):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=72:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=73:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):End
+		If I=74:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B+1):End
+		If I=75:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=81:Then
+		Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):End
+		If I=82:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+1,B+0):End
+		If I=83:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=84:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+1):Pxl-On(A+1,B+0):End
+		If I=85:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=91:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=92:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B+0):End
+		If I=93:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A+0,B+0):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=102:Then
+		Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=103:Then
+		Pxl-On(A-1,B+0):Pxl-On(A+1,B+0):End
+		If I=104:Then
+		Pxl-On(A+1,B+0):End
+	End
+	If L=0:Then
+		If I=32:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=33:Then
+		Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):End
+		If I=55:Then
+		Pxl-On(A-1,B+0):Pxl-On(A+0,B-1):Pxl-On(A+0,B+1):End
+		If I=62:Then
+		Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):End
+		If I=63:Then
+		Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=64:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):End
+		If I=65:Then
+		Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):End
+		If I=72:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B+1):Pxl-On(A+1,B+0):End
+		If I=73:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=74:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B+1):End
+		If I=75:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=82:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B+1):End
+		If I=83:Then
+		Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):End
+		If I=84:Then
+		Pxl-On(A-1,B-1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=85:Then
+		Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):End
+		If I=92:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A+0,B+0):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=93:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A+0,B+0):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=94:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=95:Then
+		Pxl-On(A-1,B+0):Pxl-On(A+0,B-1):Pxl-On(A+0,B+0):Pxl-On(A+0,B+1):Pxl-On(A+1,B+0):End
+		If I=102:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+0,B-1):Pxl-On(A+0,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+		If I=103:Then
+		Pxl-On(A+0,B+0):End
+		If I=104:Then
+		Pxl-On(A+1,B-1):Pxl-On(A+1,B+1):End
+		If I=105:Then
+		Pxl-On(A-1,B-1):Pxl-On(A-1,B+0):Pxl-On(A-1,B+1):Pxl-On(A+1,B-1):Pxl-On(A+1,B+0):Pxl-On(A+1,B+1):End
+	End
+	If I=23:Then
+		Pxl-Off(A-2,B-1:Pxl-Off(A-2,B+0:Pxl-Off(A-2,B+1:Pxl-Off(A+2,B-1:Pxl-Off(A+2,B+0:Pxl-Off(A+2,B+1:Pxl-Off(A-1,B-1:Pxl-Off(A-1,B+0:Pxl-Off(A-1,B+1:Pxl-Off(A+0,B-1:Pxl-Off(A+0,B+0:Pxl-Off(A+0,B+1:Pxl-Off(A+1,B-1:Pxl-Off(A+1,B+0:Pxl-Off(A+1,B+1
+	If A>2 or B>2:Then:B-4->B:End
+		If B<2:Then
+		Pxl-On(A-6,B+91:Pxl-On(A-6,B+92:Pxl-On(A-6,B+93:Pxl-On(A-2,B+91:Pxl-On(A-2,B+92:Pxl-On(A-2,B+93:A-4->A:90->B:End
+		If B>=2:Then
+		Pxl-On(A-2,B-1):Pxl-On(A-2,B+0):Pxl-On(A-2,B+1):Pxl-On(A+2,B-1):Pxl-On(A+2,B+0):Pxl-On(A+2,B+1):End
+	End
+	If I=24:Then
+	Pxl-Off(A-2,B-1:Pxl-Off(A-2,B+0:Pxl-Off(A-2,B+1:Pxl-Off(A+2,B-1:Pxl-Off(A+2,B+0:Pxl-Off(A+2,B+1:If A>2 or B>2:Then:B-4->B:End
+		If B<2:Then
+		Pxl-On(A-6,B+91:Pxl-On(A-6,B+92:Pxl-On(A-6,B+93:Pxl-On(A-2,B+91:Pxl-On(A-2,B+92:Pxl-On(A-2,B+93:A-4->A:90->B:End
+		If B>=2:Then
+		Pxl-On(A-2,B-1):Pxl-On(A-2,B+0):Pxl-On(A-2,B+1):Pxl-On(A+2,B-1):Pxl-On(A+2,B+0):Pxl-On(A+2,B+1):End
+	End
+	If I=25 and A>2:Then
+		Pxl-Off(A-2,B-1:Pxl-Off(A-2,B+0:Pxl-Off(A-2,B+1:Pxl-Off(A+2,B-1:Pxl-Off(A+2,B+0:Pxl-Off(A+2,B+1:A-4->A
+	Pxl-On(A-2,B-1):Pxl-On(A-2,B+0):Pxl-On(A-2,B+1):Pxl-On(A+2,B-1):Pxl-On(A+2,B+0):Pxl-On(A+2,B+1):End
+	If I=34 and A<58:Then
+		Pxl-Off(A-2,B-1:Pxl-Off(A-2,B+0:Pxl-Off(A-2,B+1:Pxl-Off(A+2,B-1:Pxl-Off(A+2,B+0:Pxl-Off(A+2,B+1:A+4->A
+	Pxl-On(A-2,B-1):Pxl-On(A-2,B+0):Pxl-On(A-2,B+1):Pxl-On(A+2,B-1):Pxl-On(A+2,B+0):Pxl-On(A+2,B+1):End
+	If I!=0 and I!=22 and I!=23 and I!=31 and I!=24 and I!=25 and I!=34:Then
+		Pxl-Off(A-2,B-1:Pxl-Off(A-2,B+0:Pxl-Off(A-2,B+1:Pxl-Off(A+2,B-1:Pxl-Off(A+2,B+0:Pxl-Off(A+2,B+1:
+	If A!=58 or B!=90:Then:B+4->B:End
+		If B=94 and A<58:Then
+		Pxl-On(A+2,B-93:Pxl-On(A+2,B-92:Pxl-On(A+2,B-91:Pxl-On(A+6,B-93:Pxl-On(A+6,B-92:Pxl-On(A+6,B-91:End
+		If B<94:Then
+		Pxl-On(A-2,B-1):Pxl-On(A-2,B+0):Pxl-On(A-2,B+1):Pxl-On(A+2,B-1):Pxl-On(A+2,B+0):Pxl-On(A+2,B+1):End
+		If B=94:Then
+			A+4->A:2->B
+		End
+	End
+End
+Pxl-Off(A-2,B-1:Pxl-Off(A-2,B+0:Pxl-Off(A-2,B+1:Pxl-Off(A+2,B-1:Pxl-Off(A+2,B+0:Pxl-Off(A+2,B+1:ClrHome
+Disp "S[|a]|v[|e] [|a][s]:"
+Disp Str1+"?"
+Input Str0
+If Str0="Y" or Str0="YES" or Str0="1":Then
+	If F=0:Then
+		StorePic Pic0
+	ClrDraw:End
+	If F=1:Then
+		StorePic Pic1
+	ClrDraw:End
+	If F=2:Then
+		StorePic Pic2
+	ClrDraw:End
+	If F=3:Then
+		StorePic Pic3
+	ClrDraw:End
+	If F=4:Then
+		StorePic Pic4
+	ClrDraw:End
+	If F=5:Then
+		StorePic Pic5
+	ClrDraw:End
+	If F=6:Then
+		StorePic Pic6
+	ClrDraw:End
+	If F=7:Then
+		StorePic Pic7
+	ClrDraw:End
+	If F=8:Then
+		StorePic Pic8
+	ClrDraw:End
+	If F=9:Then
+		StorePic Pic9
+	ClrDraw:End
+End
+GridOn
+AxesOn
+ClrHome
+Disp "No[t][|e][p][|a][|d] V 1.2"
+Disp "D[|a][t][|e]: 08/11/2023"
+Disp "D[|e]|v[|e]lo[p][|e][|d] [|b]y:"
+Disp "C[|a]l[|e][|b] L. Y[|a][t][|e][s]"
+Pause 
+ClrHome
